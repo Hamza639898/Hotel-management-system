@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{317C5B1A-7A71-4E0A-B2EF-49BB2A58DD64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hotel_mangment_systeam</RootNamespace>
+    <AssemblyName>hotel_mangment_systeam</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="account.Designer.cs">
+      <DependentUpon>account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="b11rpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>b11rpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="booking.Designer.cs">
+      <DependentUpon>booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bookinnewrpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bookinnewrpt.Designer.cs">
+      <DependentUpon>bookinnewrpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Connection_Class.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guest.Designer.cs">
+      <DependentUpon>guest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reciptcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reciptcs.Designer.cs">
+      <DependentUpon>reciptcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rooms .cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rooms .rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rooms.Designer.cs">
+      <DependentUpon>rooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="account.resx">
+      <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="b11rpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>b11rpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="booking.resx">
+      <DependentUpon>booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guest.resx">
+      <DependentUpon>guest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reciptcs.resx">
+      <DependentUpon>reciptcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rooms .rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rooms .cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rooms.resx">
+      <DependentUpon>rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horel 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horel 31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hom2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel regster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horel 32.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\221.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\222.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\223.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guest1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel 2 64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel 256%27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel 2 641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1281.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1282.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1283.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel 2 642.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_dhashbord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password login1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\patent name.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aaa3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forget5.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forget password2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1284.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user u.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regestraton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bills_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1285.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\r2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horel 33.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel regster1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel42.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proxyclick-visitor-management-system-VnACB-m22es-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horel 34.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\horel 35.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guest2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-stars1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel home1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home page 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home page 21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fin1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotwll may1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group b hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group b hotel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syteam log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syteam log1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotwll may11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel admindash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin dhas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\regstration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-stars2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\syteam log2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guest3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\booking %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forget51.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amount_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amount 111.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
